@@ -81,9 +81,12 @@
                 
             </Grid>
 
-
             <StackPanel Grid.Column="1" Width="150" Height="50">
-                
+                <TextBlock Text="Összesen" />
+                <DockPanel LastChildFill="False">
+                    <TextBox Height="30" Width="130" DockPanel.Dock="Left"/>
+                    <TextBlock Text="Ft" Height="20" DockPanel.Dock="Right" />
+                </DockPanel>
             </StackPanel>
             
         </Grid>
