@@ -68,12 +68,29 @@ namespace SzerelmiTanacsadas
                 melyikNap++;
             }
 
-            tbOsszes.Text = Szamol(melyikNap);
+            tbOsszes.Text = Szamol(melyikNap).ToString();
         }
 
-        private string Szamol(int i)
+        private int Szamol(int i)
         {
-            return (Convert.ToInt32(tbViragokArai[i].Text) * viragokNevei[i].Length).ToString();
+            return Convert.ToInt32(tbViragokArai[i].Text) * viragokNevei[i].Length;
+        }
+
+        private void btnLegdragabb_Click(object sender, RoutedEventArgs e)
+        {
+            int max = 0;
+            string melyikNap = "";
+
+            for (int i = 0; i < btnNapok.Length; i++)
+            {
+                if (max <  Szamol(i))
+                {
+                    max = Szamol(i);
+                    melyikNap = btnNapok[i].Content.ToString();
+                }
+            }
+
+            MessageBox.Show($"{melyikNap} nap a legdrágább, értéke: {max} Ft.", "Mikor kell leányt kérni", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
