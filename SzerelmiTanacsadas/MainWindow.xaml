@@ -1,0 +1,98 @@
+﻿<Window x:Class="SzerelmiTanacsadas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzerelmiTanacsadas"
+        mc:Ignorable="d"
+        Title="Árkalkulátor" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Hétfő -->
+                <TextBlock Text="Rózsa" Height="20" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                <TextBox Width="100" Grid.Column="1" Height="30" />
+                <TextBlock Text="Ft" Grid.Column="2" Height="20" />
+                <Button Content="Hétfő" Margin="10 0" Height="30" Grid.Column="3"/>
+
+                <!-- Kedd -->
+                <TextBlock Text="Tulipán" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="1"/>
+                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="1"/>
+                <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="1"/>
+                <Button Content="Kedd" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="1"/>
+
+                <!-- Szerda -->
+                <TextBlock Text="Nárcisz" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="2"/>
+                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="2"/>
+                <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="2"/>
+                <Button Content="Szerda" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="2"/>
+
+                <!-- Csütörtök -->
+                <TextBlock Text="Liliom" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="3"/>
+                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="3"/>
+                <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="3"/>
+                <Button Content="Csütörtök" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="3"/>
+
+                <!-- Péntek -->
+                <TextBlock Text="Nefelejcs" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="4"/>
+                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="4"/>
+                <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="4"/>
+                <Button Content="Péntek" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="4"/>
+
+                <!-- Szombat -->
+                <TextBlock Text="Margaréta" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="5"/>
+                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="5"/>
+                <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="5"/>
+                <Button Content="Szombat" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="5"/>
+
+                <!-- Vasárnap -->
+                <TextBlock Text="Szegfű" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="6"/>
+                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="6"/>
+                <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="6"/>
+                <Button Content="Vasárnap" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="6"/>
+
+                
+            </Grid>
+
+
+            <StackPanel Grid.Column="1" Width="150" Height="50">
+                
+            </StackPanel>
+            
+        </Grid>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btnBeallitas" Content="Beállítás" Height="30" Width="100" Margin="0,0,50,0"/>
+            <Button x:Name="btnLegdragabb" Content="Melyik a legdrágább" Height="30" Width="150" Margin="50,0,0,0"/>
+        </StackPanel>
+        
+        <Button x:Name="btnKilepes" Content="Kilépés" Grid.Row="2" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,0,50,0"/>
+    </Grid>
+</Window>
