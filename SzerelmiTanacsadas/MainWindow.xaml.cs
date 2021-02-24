@@ -20,9 +20,35 @@ namespace SzerelmiTanacsadas
     /// </summary>
     public partial class MainWindow : Window
     {
+        TextBox[] tbViragokArai;
+
         public MainWindow()
         {
             InitializeComponent();
+            TextBoxokOsszegyujtese();
+            ArakFeltoltese();
+        }
+
+        private void TextBoxokOsszegyujtese()
+        {
+            tbViragokArai = new TextBox[] {tbRozsa, tbTulipan, tbNarcisz,
+            tbLilion, tbNefelejcs, tbMargareta, tbSzegfu};
+        }
+
+        private void ArakFeltoltese()
+        {
+            tbRozsa.Text = "250";
+            tbTulipan.Text = "160";
+            tbNarcisz.Text = "220";
+            tbLilion.Text = "350";
+            tbNefelejcs.Text = "120";
+            tbMargareta.Text = "180";
+            tbSzegfu.Text = "90";
+        }
+
+        private void btnKilepes_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

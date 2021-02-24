@@ -38,43 +38,43 @@
 
                 <!-- Hétfő -->
                 <TextBlock Text="Rózsa" Height="20" VerticalAlignment="Center" Margin="30,0,0,0"/>
-                <TextBox Width="100" Grid.Column="1" Height="30" />
+                <TextBox x:Name="tbRozsa" Width="100" Grid.Column="1" Height="30" />
                 <TextBlock Text="Ft" Grid.Column="2" Height="20" />
                 <Button Content="Hétfő" Margin="10 0" Height="30" Grid.Column="3"/>
 
                 <!-- Kedd -->
                 <TextBlock Text="Tulipán" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="1"/>
-                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="1"/>
+                <TextBox x:Name="tbTulipan" Width="100" Grid.Column="1" Height="30" Grid.Row="1"/>
                 <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="1"/>
                 <Button Content="Kedd" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="1"/>
 
                 <!-- Szerda -->
                 <TextBlock Text="Nárcisz" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="2"/>
-                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="2"/>
+                <TextBox x:Name="tbNarcisz" Width="100" Grid.Column="1" Height="30" Grid.Row="2"/>
                 <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="2"/>
                 <Button Content="Szerda" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="2"/>
 
                 <!-- Csütörtök -->
                 <TextBlock Text="Liliom" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="3"/>
-                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="3"/>
+                <TextBox x:Name="tbLilion" Width="100" Grid.Column="1" Height="30" Grid.Row="3"/>
                 <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="3"/>
                 <Button Content="Csütörtök" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="3"/>
 
                 <!-- Péntek -->
                 <TextBlock Text="Nefelejcs" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="4"/>
-                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="4"/>
+                <TextBox x:Name="tbNefelejcs"  Width="100" Grid.Column="1" Height="30" Grid.Row="4"/>
                 <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="4"/>
                 <Button Content="Péntek" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="4"/>
 
                 <!-- Szombat -->
                 <TextBlock Text="Margaréta" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="5"/>
-                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="5"/>
+                <TextBox x:Name="tbMargareta" Width="100" Grid.Column="1" Height="30" Grid.Row="5"/>
                 <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="5"/>
                 <Button Content="Szombat" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="5"/>
 
                 <!-- Vasárnap -->
                 <TextBlock Text="Szegfű" Height="20" VerticalAlignment="Center" Margin="30,0,0,0" Grid.Row="6"/>
-                <TextBox Width="100" Grid.Column="1" Height="30" Grid.Row="6"/>
+                <TextBox x:Name="tbSzegfu" Width="100" Grid.Column="1" Height="30" Grid.Row="6"/>
                 <TextBlock Text="Ft" Grid.Column="2" Height="20" Grid.Row="6"/>
                 <Button Content="Vasárnap" Margin="10 0" Height="30" Grid.Column="3" Grid.Row="6"/>
 
@@ -96,6 +96,6 @@
             <Button x:Name="btnLegdragabb" Content="Melyik a legdrágább" Height="30" Width="150" Margin="50,0,0,0"/>
         </StackPanel>
         
-        <Button x:Name="btnKilepes" Content="Kilépés" Grid.Row="2" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,0,50,0"/>
+        <Button x:Name="btnKilepes" Content="Kilépés" Grid.Row="2" Height="30" Width="100" HorizontalAlignment="Right" Margin="0,0,50,0" Click="btnKilepes_Click"/>
     </Grid>
 </Window>
