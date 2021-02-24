@@ -22,6 +22,7 @@ namespace SzerelmiTanacsadas
     {
         TextBox[] tbViragokArai;
         Button[] btnNapok;
+        string[] viragokNevei = new string[] { "rózsa", "tulipán", "nárcisz", "liliom", "nefelejcs", "margareta", "szegfu" };
 
         public MainWindow()
         {
@@ -56,6 +57,23 @@ namespace SzerelmiTanacsadas
         private void btnKilepes_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void nap_Click(object sender, RoutedEventArgs e)
+        {
+            int melyikNap = 0;
+
+            while (sender != btnNapok[melyikNap])
+            {
+                melyikNap++;
+            }
+
+            tbOsszes.Text = Szamol(melyikNap);
+        }
+
+        private string Szamol(int i)
+        {
+            return (Convert.ToInt32(tbViragokArai[i].Text) * viragokNevei[i].Length).ToString();
         }
     }
 }
