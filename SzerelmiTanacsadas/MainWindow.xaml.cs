@@ -21,14 +21,21 @@ namespace SzerelmiTanacsadas
     public partial class MainWindow : Window
     {
         TextBox[] tbViragokArai;
+        Button[] btnNapok;
 
         public MainWindow()
         {
             InitializeComponent();
             TextBoxokOsszegyujtese();
             ArakFeltoltese();
+            ButtonokOsszegyujtese();
         }
 
+        private void ButtonokOsszegyujtese()
+        {
+            btnNapok = new Button[] { btnHetfo, btnKedd, btnSzerda, btnCsutortok, btnPentek, btnSzombat, btnVasarnap };
+        }
+        
         private void TextBoxokOsszegyujtese()
         {
             tbViragokArai = new TextBox[] {tbRozsa, tbTulipan, tbNarcisz,
